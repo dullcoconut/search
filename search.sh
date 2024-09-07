@@ -7,9 +7,9 @@ read -r -p "Output file:" OUT
 # Check if output provided
 if [ -z "$OUT" ]; then
     
-    find | grep "$searchterm"
+    find | grep -i "$searchterm"
     exit 1
 fi
 
 
-find | grep "$searchterm" > "$OUT"
+find | grep -i "$searchterm" > "$OUT"
